@@ -1,8 +1,11 @@
-require_relative 'config/environment'
+require_relative "config/environment"
 
 class App < Sinatra::Base
+  get "/" do
+    erb :index #this tells sinatra to render a file called index inside of a directory called views.
+  end
 
-	get '/' do
-		
-	end
+  get "/info" do
+    erb :info
+  end
 end
